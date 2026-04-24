@@ -7,29 +7,36 @@ orderButton.addEventListener("click", function () {
     
 });
 
-
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href"))?.scrollIntoView({
-            behavior: "smooth"
-        });
+// SMOOTH SCROLL (only for internal links)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     });
 });
 
 
-const toggleBtn = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-toggleBtn.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-});
+// TOGGLE MENU
+function toggleMenu() {
+    const midbox = document.getElementById("midbox");
+    const toggle = document.querySelector(".menu-toggle");
+
+    midbox.classList.toggle("active");
+    toggle.classList.toggle("active");
+}
 
 
-const links = document.querySelectorAll("#menu a");
+// CLOSE MENU WHEN CLICKING LINKS
+const navLinks = document.querySelectorAll(".menu a");
 
-links.forEach(link => {
+navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        document.getElementById("menu").classList.remove("active");
+        document.getElementById("midbox").classList.remove("active");
+        document.querySelector(".menu-toggle").classList.remove("active");
     });
 });
-

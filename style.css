@@ -102,15 +102,14 @@
     background-color: #e4592ac0;
 }
 
-/* HAMBURGER */
 .menu-toggle {
     display: none;
     font-size: 30px;
     cursor: pointer;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
+
+@media (max-width: 600px) {
 
     .menu-toggle {
         display: block;
@@ -149,7 +148,7 @@
     padding: 20px;
 }
 
-/* HERO SECTION */
+
 #section1 {
     max-width: 4000px;
     margin: 16px 38px;
@@ -163,13 +162,11 @@
     flex-wrap: wrap;
 }
 
-/* LEFT SIDE */
+
 .sec-chd {
     flex: 1;
     min-width: 280px;
 }
-
-/* HEADING */
 .sec1 {
     font-size: 64px;
     font-weight: bold;
@@ -251,16 +248,16 @@
     }
 
     .sec1 {
-        font-size: 36px;
+        font-size: 33px;
     }
     .chd2 {
-        font-size: 16px;
+        font-size: 15px;
     }
     #botm-sec {
         justify-content: center;
     }
     .sec01btn {
-        width: 100%;
+        /* width: 100%; */
         max-width: 250px;
         margin: 20px auto;
     }
@@ -269,14 +266,14 @@
         margin-top: 20px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .sec1 {
-        font-size: 28px;
+        font-size: 18px;
+        overflow: hidden;
     }
 }
 
  #container2 {
-    /* border: 2px solid green; */
     height: 90px;
     width: 100%;
     display: flex;
@@ -307,7 +304,8 @@
 
 .head02 {
     /* border: 2px solid red; */
-    height: 145px;
+    height: 150px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -365,7 +363,7 @@
    font-size: 19px;
 }
 
-/* MAIN CONTAINER */
+
 #container3 {
     display: flex;
     justify-content: space-evenly;
@@ -397,7 +395,7 @@
 
 .box1 {
     border: 1px solid orangered;
-    width: 93%;
+    width: auto;
     border-radius: 20px;
     background: linear-gradient(to left, #FAECE9, #F6DAD3);
     padding: 20px;
