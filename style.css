@@ -27,90 +27,89 @@
      animation: moveLeft 10s linear infinite;
     font-size: 15px;
 } */
+/* NAVBAR */
 #navbar {
-    height: 110px;
+    height: 90px;
     background-color: #f9e5e1aa;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 0 20px;
 }
 
 /* LOGO */
 .logo {
     display: flex;
     align-items: center;
-  font-size: 27px;
+    font-size: 24px;
     font-weight: bold;
-   
 }
+
 .logo-p {
     color: orangered;
-    margin-left: 2px;
- font-weight: bold;
- font-size: 27px;
- overflow: hidden;
+    margin-left: 4px;
+    font-size: 24px;
 }
 
-/* MENU */
+/* MENU BOX */
 .midbox {
-    /* border: 2px solid red; */
-    height: 70px;
+    height: 60px;
     display: flex;
     align-items: center;
-    background-color:#f9d4ccd0 ;
-    width: 450px;
+    background-color: #f9d4ccd0;
+    width: 420px;
     justify-content: center;
     border-radius: 50px;
-}
-.midbox:hover{
-     background-color:#f5d7d1d3 ;
+    transition: 0.3s;
 }
 
+.midbox:hover {
+    background-color: #f5d7d1d3;
+}
+
+/* MENU LINKS */
 .menu {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .menu a {
     text-decoration: none;
     color: black;
-    font-size: 19px;
-
+    font-size: 17px;
 }
 
 .menu a:hover {
-    color: rgba(255, 68, 0, 0.596);
+    color: rgba(255, 68, 0, 0.7);
 }
 
 /* BUTTON */
 .rightbox {
-    height: 55px;
+    height: 50px;
     width: 150px;
-    padding: 0 20px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     background-color: #F15A29;
-        box-shadow: 1px 4px 19px rgba(228, 120, 80, 0.646);
+    box-shadow: 1px 4px 19px rgba(228, 120, 80, 0.646);
     cursor: pointer;
-    /* margin-right: 30px; */
 }
 
-.rightbox:hover{
-    background-color: #e4592ac0; 
+.rightbox:hover {
+    background-color: #e4592ac0;
 }
 
-
+/* HAMBURGER */
 .menu-toggle {
     display: none;
-    font-size: 38px;
+    font-size: 30px;
     cursor: pointer;
-margin-right: 20px;
 }
 
+/* MOBILE */
 @media (max-width: 700px) {
 
     .menu-toggle {
@@ -119,13 +118,18 @@ margin-right: 20px;
 
     .midbox {
         position: absolute;
-        top: 80px;
+        top: 90px;
         left: 0;
         width: 100%;
         background-color: #f9e5e1;
         display: none;
         flex-direction: column;
         padding: 20px 0;
+        border-radius: 0;
+    }
+
+    .midbox.active {
+        display: flex;
     }
 
     .menu {
@@ -135,14 +139,9 @@ margin-right: 20px;
     }
 
     .rightbox {
-        display: none; 
+        display: none;
     }
-
-    .midbox.active {
-        display: flex;
-    }
-}
-    
+} 
 
 
 #main-box {
