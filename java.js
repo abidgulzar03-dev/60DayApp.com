@@ -20,7 +20,6 @@ document.querySelectorAll("a").forEach(link => {
 
 const toggleBtn = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
-
 toggleBtn.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
